@@ -77,7 +77,7 @@ public class Scheduling {
 //		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 //		calendar.searchNameFilterclick("Nithya P");	
 //	}
-//	
+//
 //	@Test(priority=4,
 //			description="Clicking on schedules filter")
 //	public void clickSchedulesFilter() {
@@ -86,12 +86,12 @@ public class Scheduling {
 //	}
 	
 	
-//	@Test(priority=5,
-//			description="Scheduling with Invalid Data for Notified customer")
-//	public void SchedulingWithInvalidDataForNotified() throws InterruptedException {
-//		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
-//		calendar.schedulingForNotified("1996", "1200");
-//	}
+	@Test(priority=5,
+			description="Scheduling with Invalid Data for Notified customer")
+	public void SchedulingWithInvalidDataForNotified() throws InterruptedException {
+		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+		calendar.schedulingForNotified("1996", "1200");
+	}
 	
 	@Test(priority=6,
 			description="Rescheduling with Invalid Data for Incomplete call")
@@ -101,9 +101,17 @@ public class Scheduling {
 		calendar.schedulingForIncomplete("1996", "1200");
 	}
 	
-//	@AfterClass
-//	public void tearDown() {
-//		driver.quit();
-//	}
+	@Test(priority=7,
+			description="Rescheduling with Invalid Data for Lapsed status")
+	public void SchedulingWithInvalidDataForLapsed() throws Exception {
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		//calendar.schedulingForLapsed("MS Aniruddha Jegannath", "1996", "1200");
+		calendar.schedulingForLapsed("1996", "1200");
+	}
+	
+	@AfterClass
+	public void tearDown() {
+		driver.quit();
+	}
 
 }

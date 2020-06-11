@@ -1,54 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="55894" started-at="2020-06-10T15:56:26Z" finished-at="2020-06-10T15:57:22Z">
+  <suite name="Default suite" duration-ms="175593" started-at="2020-06-11T13:12:44Z" finished-at="2020-06-11T13:15:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="55894" started-at="2020-06-10T15:56:26Z" finished-at="2020-06-10T15:57:22Z">
-      <class name="BrowserLaunch.Scheduling">
-        <test-method status="PASS" signature="setup()[pri:0, instance:BrowserLaunch.Scheduling@4f638935]" name="setup" is-config="true" duration-ms="24143" started-at="2020-06-10T15:56:26Z" finished-at="2020-06-10T15:56:50Z">
+    <test name="Default test" duration-ms="175593" started-at="2020-06-11T13:12:44Z" finished-at="2020-06-11T13:15:40Z">
+      <class name="BrowserLaunch.NotifyTheAstrologer">
+        <test-method status="PASS" signature="setup()[pri:0, instance:BrowserLaunch.NotifyTheAstrologer@4f638935]" name="setup" is-config="true" duration-ms="30432" started-at="2020-06-11T13:12:44Z" finished-at="2020-06-11T13:13:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="successAstrologerBrowserLaunch()[pri:1, instance:BrowserLaunch.Scheduling@4f638935]" name="successAstrologerBrowserLaunch" duration-ms="21781" started-at="2020-06-10T15:56:50Z" description="Success Login for astrologer" finished-at="2020-06-10T15:57:12Z">
+        <test-method status="PASS" signature="successAstrologerBrowserLaunch()[pri:1, instance:BrowserLaunch.NotifyTheAstrologer@4f638935]" name="successAstrologerBrowserLaunch" duration-ms="23301" started-at="2020-06-11T13:13:14Z" description="Success Login for astrologer" finished-at="2020-06-11T13:13:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successAstrologerBrowserLaunch -->
-        <test-method status="FAIL" signature="SchedulingWithInvalidDataForIncomplete()[pri:6, instance:BrowserLaunch.Scheduling@4f638935]" name="SchedulingWithInvalidDataForIncomplete" duration-ms="9908" started-at="2020-06-10T15:57:12Z" description="Rescheduling with Invalid Data for Incomplete call" finished-at="2020-06-10T15:57:22Z">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <span _ngcontent-yut-c4="" class="redColor cursor">...</span> is not clickable at point (722, 285). Other element would receive the click: <div _ngcontent-yut-c4="" aria-hidden="true" aria-labelledby="myModalLabel" class="modal modal-backdrop" role="dialog" tabindex="-1" style="display: block;">...</div>
-  (Session info: chrome=83.0.4103.97)
-Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:08.638Z'
-System info: host: 'DESKTOP-PNR9VK8', ip: '192.168.225.177', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.14 (be04594a2b841..., userDataDir: C:\Users\IT\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:61569}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: b645f3f9aa45fa8ea4f8c9fac1b50e60]]>
-            </message>
+        <test-method status="PASS" signature="successCustomerBrowserLaunch()[pri:2, instance:BrowserLaunch.NotifyTheAstrologer@4f638935]" name="successCustomerBrowserLaunch" duration-ms="13449" started-at="2020-06-11T13:13:38Z" description="Success Login for customer" finished-at="2020-06-11T13:13:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- successCustomerBrowserLaunch -->
+        <test-method status="PASS" signature="NotifyAstrologer()[pri:3, instance:BrowserLaunch.NotifyTheAstrologer@4f638935]" name="NotifyAstrologer" duration-ms="58490" started-at="2020-06-11T13:13:51Z" description="Notifying the astrologer from customer using search name filter" finished-at="2020-06-11T13:14:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NotifyAstrologer -->
+        <test-method status="FAIL" signature="SchedulingWithInvalidDataForNotified()[pri:4, instance:BrowserLaunch.NotifyTheAstrologer@4f638935]" name="SchedulingWithInvalidDataForNotified" duration-ms="49849" started-at="2020-06-11T13:14:50Z" description="Scheduling with Invalid Data for Notified customer" finished-at="2020-06-11T13:15:40Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span _ngcontent-yut-c4="" class="redColor cursor">...</span> is not clickable at point (722, 285). Other element would receive the click: <div _ngcontent-yut-c4="" aria-hidden="true" aria-labelledby="myModalLabel" class="modal modal-backdrop" role="dialog" tabindex="-1" style="display: block;">...</div>
-  (Session info: chrome=83.0.4103.97)
-Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:08.638Z'
-System info: host: 'DESKTOP-PNR9VK8', ip: '192.168.225.177', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.14 (be04594a2b841..., userDataDir: C:\Users\IT\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:61569}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: b645f3f9aa45fa8ea4f8c9fac1b50e60
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-at AstronethraPO.CalendarPO.incompleteReschedule(CalendarPO.java:111)
-at AstronethraPO.CalendarPO.schedulingForIncomplete(CalendarPO.java:169)
-at BrowserLaunch.Scheduling.SchedulingWithInvalidDataForIncomplete(Scheduling.java:101)
+              <![CDATA[java.lang.NullPointerException
+at AstronethraPO.CalendarPO.schedulingForNotified(CalendarPO.java:194)
+at BrowserLaunch.NotifyTheAstrologer.SchedulingWithInvalidDataForNotified(NotifyTheAstrologer.java:86)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -76,11 +56,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SchedulingWithInvalidDataForIncomplete -->
-      </class> <!-- BrowserLaunch.Scheduling -->
+        </test-method> <!-- SchedulingWithInvalidDataForNotified -->
+      </class> <!-- BrowserLaunch.NotifyTheAstrologer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

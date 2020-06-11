@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -39,6 +40,13 @@ public class CalendarPO {
 		return ele;
 	}
 	
+	public WebElement schedulesFilterForLapsed() {
+		ele = driver.findElement(By.xpath("//select[@style='font-size: 14px;border-radius: 20px;']"));
+		Select sel = new Select(ele);
+		sel.selectByVisibleText("LAPSED");
+		return ele;
+	}
+	
 	public WebElement searchnameFilter() throws Exception {
 		ele = driver.findElement(By.xpath("//input[@placeholder='Search Name']"));
 		//ele.sendKeys(Keys.ENTER);
@@ -56,7 +64,7 @@ public class CalendarPO {
 	}
 	
 	public WebElement scheduleForNotified() {
-		ele = driver.findElement(By.xpath("/html/body/app-root/app-astrologer/app-result-page/html/body/div/div[3]/div[1]/div/div/div/div[1]/div[2]/div/div/div/div[2]/button"));
+		ele = driver.findElement(By.xpath("//button[@style='border-radius: 20px;min-width:fit-content;']"));
 		return ele;
 	}
 	
@@ -89,8 +97,22 @@ public class CalendarPO {
 		return ele;
 	}
 	
+	public WebElement scheduleBtn1() {
+		try {
+			ele = driver.findElement(By.xpath("/html/body/app-root/app-astrologer/app-result-page/html/body/div/div[2]/div[8]/div/div/div[3]/button"));
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return ele;
+	}
+	
 	public WebElement closePopup() {
 		ele = driver.findElement(By.xpath("/html/body/app-root/app-astrologer/app-result-page/html/body/div/div[2]/div[8]/div/div/div[1]/button/span"));
+		return ele;
+	}
+	
+	public WebElement refresh() {
+		ele = driver.findElement(By.xpath("//i[@class='fa fa-refresh']"));
 		return ele;
 	}
 	
@@ -108,10 +130,32 @@ public class CalendarPO {
 			System.out.println("Customer Name: " +customerName);
 			if((customerName.equalsIgnoreCase("Payaswini Hegde"))) {
 				driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
-				incompleteList.get(i).findElement(By.xpath("/html/body/app-root/app-astrologer/app-result-page/html/body/div/div[3]/div[1]/div/div/div/div[1]/div[2]/div/div/div/div[2]/p[3]/span/p/span[1]")).click();
+				//incompleteList.get(i).findElement(By.xpath("/html/body/app-root/app-astrologer/app-result-page/html/body/div/div[3]/div[1]/div/div/div/div[1]/div[2]/div/div/div/div[2]/p[3]/span/p/span[1]")).click();;
+				Actions act = new Actions(driver);
+				act.moveToElement(incompleteList.get(i).findElement(By.xpath("//span[@class=\"redColor cursor\"][1]"))).click().build().perform();;
+				
+				//				WebElement ele1=incompleteList.get(i).findElement(By.xpath("/html/body/app-root/app-astrologer/app-result-page/html/body/div/div[3]/div[1]/div/div/div/div[1]/div[2]/div/div/div/div[2]/p[3]/span/p/span[1]"));
+//				((JavascriptExecutor)driver).executeScript("arguments[0].checked = true;", ele1);
+//				ele1.click();
 //				WebDriverWait wait = new WebDriverWait(driver,200);
 //				wait.until(ExpectedConditions.invisibilityOf(incompleteList.get(i).findElement(By.xpath("/html/body/app-root/app-astrologer/app-result-page/html/body/div/div[3]/div[1]/div/div/div/div[1]/div[2]/div/div/div/div[2]/p[3]/span/p/span[1]"))));	
 				System.out.println("Clicked reschedule");			
+			}
+		}
+		return ele;
+	}
+	
+	public WebElement lapsedReschedule() {
+		List<WebElement> lapsedList=driver.findElements(By.xpath("/html/body/app-root/app-astrologer/app-result-page/html/body/div/div[3]/div[1]/div/div/div/div[1]/div[2]/div[1]/div"));
+		for(int i=0;i<lapsedList.size();i++) {
+			System.out.println("Lapsed list size: "+lapsedList.size());
+			ele=lapsedList.get(i).findElement(By.xpath("/html/body/app-root/app-astrologer/app-result-page/html/body/div/div[3]/div[1]/div/div/div/div[1]/div[2]/div/div/div/div[1]/div[2]/p[1]/b"));
+			String customerName=ele.getText();
+			System.out.println("Customer Name: " +customerName);
+			if((customerName.equalsIgnoreCase("MS Aniruddha Jegannath"))) {
+				driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
+				lapsedList.get(i).findElement(By.xpath("//a[@style=\"color: orange;text-align: center;\"]")).click();;
+				System.out.println("Clicked change option");
 			}
 		}
 		return ele;
@@ -147,7 +191,7 @@ public class CalendarPO {
 	
 	public void schedulingForNotified(String year, String time) throws InterruptedException {
 		calendarTab().click();
-		schedulesFilterForNotified().click();
+		scheduleForNotified().click();
 		scheduleDay();
 		scheduleMonth();
 		schduleYearValue(year);
@@ -161,22 +205,32 @@ public class CalendarPO {
 	public void schedulingForIncomplete(String year, String time) throws Exception {
 		calendarTab().click();
 		schedulesFilterForIncomplete().click();
-		//Thread.sleep(1000);
-		//searchnameFilterValue(name);
-		//Thread.sleep(10000);
-//		incompleteReschedule().click();
 		driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
-		incompleteReschedule().click();
-		//incompleteReschedule();
+		incompleteReschedule();
 		driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
 		scheduleDay();
 		scheduleMonth();
 		schduleYearValue(year);
 		schduleTimeValue(time);
 		scheduleBtn().click();
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 		closePopup().click();
 	}
-
+	
+	public void schedulingForLapsed(String year, String time) throws Exception {
+		Thread.sleep(5000);
+		calendarTab().click();
+		schedulesFilterForLapsed().click();
+		//searchnameFilterValue(name);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		lapsedReschedule();
+		scheduleDay();
+		scheduleMonth();
+		schduleYearValue(year);
+		schduleTimeValue(time);
+		driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
+		scheduleBtn1();
+		closePopup().click();
+	}
 
 }

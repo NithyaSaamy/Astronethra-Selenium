@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Astronethra">
+
+	<!-- <listeners>
+		<listener class-name="com.auto.Listeners.Listener"></listener>
+	</listeners> -->
+
+   <!--  <test name="Scheduling">
+		<classes>
+			<class name="BrowserLaunch.Scheduling"></class>
+		</classes>
+	</test>  -->
+	
+	<test name="SchedulingForNotified">
+		<classes>
+			<class name="BrowserLaunch.SchedulingForNotified"></class>
+		</classes>
+	</test> 
+	
+	<test name="SchedulingForIncomplete">
+		<classes>
+			<class name="BrowserLaunch.SchedulingForIncomplete"></class>
+		</classes>
+	</test> 
+	
+	<test name="SchedulingForLapsed">
+		<classes>
+			<class name="BrowserLaunch.SchedulingForLapsed"></class>
+		</classes>
+	</test> 
+
+	<!-- <test name="AstrologerLogin">
+		<classes>
+			<class name="TestCases.AstrologerLogin"></class>
+		</classes>
+	</test> 
+	
+	<test name="CustomerLogin">
+		<classes>
+			<class name="TestCases.CustomerLogin"></class>
+		</classes>
+	</test> 
+		 -->
+</suite>

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jun 10 21:26:26 IST 2020</td>
+<td>Started on:</td><td>Thu Jun 11 18:42:44 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>55 seconds (55894 ms)</td>
+<tr><td>Total time:</td><td>175 seconds (175593 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,29 +75,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='BrowserLaunch.Scheduling.SchedulingWithInvalidDataForIncomplete()'><b>SchedulingWithInvalidDataForIncomplete</b><br>Test class: BrowserLaunch.Scheduling<br>Test method: Rescheduling with Invalid Data for Incomplete call</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span _ngcontent-yut-c4=&quot;&quot; class=&quot;redColor cursor&quot;&gt;...&lt;/span&gt; is not clickable at point (722, 285). Other element would receive the click: &lt;div _ngcontent-yut-c4=&quot;&quot; aria-hidden=&quot;true&quot; aria-labelledby=&quot;myModalLabel&quot; class=&quot;modal modal-backdrop&quot; role=&quot;dialog&quot; tabindex=&quot;-1&quot; style=&quot;display: block;&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=83.0.4103.97)
-Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:33:08.638Z&apos;
-System info: host: &apos;DESKTOP-PNR9VK8&apos;, ip: &apos;192.168.225.177&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_111&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.14 (be04594a2b841..., userDataDir: C:\Users\IT\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:61569}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: b645f3f9aa45fa8ea4f8c9fac1b50e60
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at AstronethraPO.CalendarPO.incompleteReschedule(CalendarPO.java:111)
-	at AstronethraPO.CalendarPO.schedulingForIncomplete(CalendarPO.java:169)
-	at BrowserLaunch.Scheduling.SchedulingWithInvalidDataForIncomplete(Scheduling.java:101)
+<td title='BrowserLaunch.NotifyTheAstrologer.SchedulingWithInvalidDataForNotified()'><b>SchedulingWithInvalidDataForNotified</b><br>Test class: BrowserLaunch.NotifyTheAstrologer<br>Test method: Scheduling with Invalid Data for Notified customer</td>
+<td><div><pre>java.lang.NullPointerException
+	at AstronethraPO.CalendarPO.schedulingForNotified(CalendarPO.java:194)
+	at BrowserLaunch.NotifyTheAstrologer.SchedulingWithInvalidDataForNotified(NotifyTheAstrologer.java:86)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -123,29 +104,10 @@ Session ID: b645f3f9aa45fa8ea4f8c9fac1b50e60
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace990679445", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace990679445'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span _ngcontent-yut-c4=&quot;&quot; class=&quot;redColor cursor&quot;&gt;...&lt;/span&gt; is not clickable at point (722, 285). Other element would receive the click: &lt;div _ngcontent-yut-c4=&quot;&quot; aria-hidden=&quot;true&quot; aria-labelledby=&quot;myModalLabel&quot; class=&quot;modal modal-backdrop&quot; role=&quot;dialog&quot; tabindex=&quot;-1&quot; style=&quot;display: block;&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=83.0.4103.97)
-Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:33:08.638Z&apos;
-System info: host: &apos;DESKTOP-PNR9VK8&apos;, ip: &apos;192.168.225.177&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_111&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.14 (be04594a2b841..., userDataDir: C:\Users\IT\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:61569}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: b645f3f9aa45fa8ea4f8c9fac1b50e60
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at AstronethraPO.CalendarPO.incompleteReschedule(CalendarPO.java:111)
-	at AstronethraPO.CalendarPO.schedulingForIncomplete(CalendarPO.java:169)
-	at BrowserLaunch.Scheduling.SchedulingWithInvalidDataForIncomplete(Scheduling.java:101)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1048712791", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1048712791'><pre>java.lang.NullPointerException
+	at AstronethraPO.CalendarPO.schedulingForNotified(CalendarPO.java:194)
+	at BrowserLaunch.NotifyTheAstrologer.SchedulingWithInvalidDataForNotified(NotifyTheAstrologer.java:86)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -172,8 +134,8 @@ Session ID: b645f3f9aa45fa8ea4f8c9fac1b50e60
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>9</td>
-<td>BrowserLaunch.Scheduling@4f638935</td></tr>
+<td>49</td>
+<td>BrowserLaunch.NotifyTheAstrologer@4f638935</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -183,10 +145,20 @@ Session ID: b645f3f9aa45fa8ea4f8c9fac1b50e60
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='BrowserLaunch.Scheduling.successAstrologerBrowserLaunch()'><b>successAstrologerBrowserLaunch</b><br>Test class: BrowserLaunch.Scheduling<br>Test method: Success Login for astrologer</td>
+<td title='BrowserLaunch.NotifyTheAstrologer.NotifyAstrologer()'><b>NotifyAstrologer</b><br>Test class: BrowserLaunch.NotifyTheAstrologer<br>Test method: Notifying the astrologer from customer using search name filter</td>
 <td></td>
-<td>21</td>
-<td>BrowserLaunch.Scheduling@4f638935</td></tr>
+<td>58</td>
+<td>BrowserLaunch.NotifyTheAstrologer@4f638935</td></tr>
+<tr>
+<td title='BrowserLaunch.NotifyTheAstrologer.successAstrologerBrowserLaunch()'><b>successAstrologerBrowserLaunch</b><br>Test class: BrowserLaunch.NotifyTheAstrologer<br>Test method: Success Login for astrologer</td>
+<td></td>
+<td>23</td>
+<td>BrowserLaunch.NotifyTheAstrologer@4f638935</td></tr>
+<tr>
+<td title='BrowserLaunch.NotifyTheAstrologer.successCustomerBrowserLaunch()'><b>successCustomerBrowserLaunch</b><br>Test class: BrowserLaunch.NotifyTheAstrologer<br>Test method: Success Login for customer</td>
+<td></td>
+<td>13</td>
+<td>BrowserLaunch.NotifyTheAstrologer@4f638935</td></tr>
 </table><p>
 </body>
 </html>
