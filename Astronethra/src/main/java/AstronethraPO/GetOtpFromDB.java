@@ -20,7 +20,7 @@ public class GetOtpFromDB {
 		log.info("inside getOtp from DB");
 		//String finalURL= "http://localhost:8085/OtpServlet/GetOtpFromDB?Mobilenumber="+Mobilenumber+"&CountryCode="+CountryCode;
 		String finalURL= "http://localhost:8014/OtpServlet/GetOtpFromDB?Mobilenumber="+Mobilenumber+"&CountryCode="+CountryCode;
-		HttpGet request = new HttpGet(finalURL) ;
+		HttpGet request = new HttpGet(finalURL);
 		log.info(request);
 
 		try (CloseableHttpResponse response = httpclient.execute(request)) {

@@ -2,7 +2,11 @@ package BrowserLaunch;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -30,13 +34,17 @@ public class SchedulingForNotified {
 	GetOtpFromDB GetOtpFromdb1;
 	AppointmentsPO appointmets;
 	
+	Logger log = LogManager.getLogger(SchedulingForNotified.class);
+	
 	@BeforeClass
-	public void setup() {
+	public void setup(ITestContext context) {
 		browser = new AstrologerSetup();
 		driver=browser.getBrowser();
 		loginPO = new AstrologerLoginPO(driver);
 		GetOtpFromdb = new GetOtpFromDB();
 		calendar = new CalendarPO(driver);
+		context.setAttribute("className", this.getClass().getSimpleName());
+		context.setAttribute("webDriver", driver);
 		
 		//customer
 		
@@ -45,6 +53,8 @@ public class SchedulingForNotified {
 		cusloginPO = new CustomerLoginPO(driver1);
 		GetOtpFromdb1 = new GetOtpFromDB();
 		appointmets = new AppointmentsPO(driver1);
+		context.setAttribute("className", this.getClass().getSimpleName());
+		context.setAttribute("webDriver", driver1);
 	}
 	
 	@Test(priority=1,
@@ -55,6 +65,9 @@ public class SchedulingForNotified {
 			loginPO.login("91", "8310378098");
 			String Otp = GetOtpFromdb.sendGet("8310378098", "91");
 			loginPO.otp(Otp);
+			String currentURL = driver.getCurrentUrl();
+		    System.out.println("currentURL - " +currentURL);
+			Assert.assertEquals(currentURL,"https://qa1.jobztop.com/astronethra/#/AstrologerHome");
 		} catch(Exception e) {
 			System.out.println("Unable to complete the success login for astrologer");
 		}
@@ -67,8 +80,11 @@ public class SchedulingForNotified {
 	
 			driver1.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 			cusloginPO.login("91", "8310378098");
-			String Otp = GetOtpFromdb1.sendGet("8310378098", "91"); //9092797998
+			String Otp = GetOtpFromdb1.sendGet("8310378098", "91"); //8310378098
 			cusloginPO.cusotpvalidation(Otp);
+			String currentURL = driver.getCurrentUrl();
+		    System.out.println("currentURL - " +currentURL);
+			Assert.assertEquals(currentURL,"https://qa1.jobztop.com/astronethra/#/astrologer/QandA");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}		
@@ -79,6 +95,7 @@ public class SchedulingForNotified {
 	public void SchedulingWithInvalidDataForNotified() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 		calendar.schedulingForNotified("1996", "1200");
+		
 	}
 	
 	@Test(priority=4,

@@ -37,5 +37,51 @@
 	<classpathentry kind="lib" path="D:/selenium-jars/client-combined-3.11.0.jar"/>
 	<classpathentry kind="lib" path="D:/selenium-jars/client-combined-3.11.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/Desktop/mysql-connector-java-8.0.19.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse-jee-2019-03-R-win32-x86_64/eclipse/plugins/org.testng_7.2.0.r202003151902.jar" sourcepath="D:/eclipse-jee-2019-03-R-win32-x86_64/eclipse/plugins/org.testng.source_7.2.0.r202003151902.jar"/>
+	<classpathentry kind="lib" path="C:/Users/IT/.m2/repository/org/apache/poi/poi-ooxml/4.1.0/poi-ooxml-4.1.0.jar" sourcepath="C:/Users/IT/.m2/repository/org/apache/poi/poi-ooxml/4.1.0/poi-ooxml-4.1.0-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.apache.poi"/>
+			<attribute name="maven.artifactId" value="poi-ooxml"/>
+			<attribute name="maven.version" value="4.1.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/IT/.m2/repository/org/apache/ant/ant/1.10.3/ant-1.10.3.jar" sourcepath="C:/Users/IT/.m2/repository/org/apache/ant/ant/1.10.3/ant-1.10.3-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.apache.ant"/>
+			<attribute name="maven.artifactId" value="ant"/>
+			<attribute name="maven.version" value="1.10.3"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/IT/.m2/repository/org/apache/ant/ant/1.9.4/ant-1.9.4.jar" sourcepath="C:/Users/IT/.m2/repository/org/apache/ant/ant/1.9.4/ant-1.9.4-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.apache.ant"/>
+			<attribute name="maven.artifactId" value="ant"/>
+			<attribute name="maven.version" value="1.9.4"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/IT/.m2/repository/net/java/dev/jna/jna-platform/4.1.0/jna-platform-4.1.0.jar" sourcepath="C:/Users/IT/.m2/repository/net/java/dev/jna/jna-platform/4.1.0/jna-platform-4.1.0-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="net.java.dev.jna"/>
+			<attribute name="maven.artifactId" value="jna-platform"/>
+			<attribute name="maven.version" value="4.1.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/IT/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar" sourcepath="C:/Users/IT/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="commons-io"/>
+			<attribute name="maven.artifactId" value="commons-io"/>
+			<attribute name="maven.version" value="2.4"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -3,9 +3,9 @@
 
 <suite name="Astronethra">
 
-	<!-- <listeners>
+	<listeners>
 		<listener class-name="com.auto.Listeners.Listener"></listener>
-	</listeners> -->
+	</listeners> 
 
    <!--  <test name="Scheduling">
 		<classes>
@@ -19,7 +19,7 @@
 		</classes>
 	</test> 
 	
-	<test name="SchedulingForIncomplete">
+	<!-- <test name="SchedulingForIncomplete">
 		<classes>
 			<class name="BrowserLaunch.SchedulingForIncomplete"></class>
 		</classes>
@@ -29,7 +29,7 @@
 		<classes>
 			<class name="BrowserLaunch.SchedulingForLapsed"></class>
 		</classes>
-	</test> 
+	</test>  -->
 
 	<!-- <test name="AstrologerLogin">
 		<classes>
